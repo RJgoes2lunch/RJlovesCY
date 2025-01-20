@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I LOVE ORANGE1106</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://s.alicdn.com/@sc04/kf/H01bb133c76e946568e9863ebaf819c02N.jpg_720x720q50.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      margin-top: 20%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text readability */
+      padding: 20px;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .button {
+      margin-top: 20px;
+      background-color: #fdcb6e;
+      color: #2d3436;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+    .message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2em;
+      animation: popIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes popIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://soundcloud.com/5-0-0/you-found-me?si=fd707d917db84f3a9a845e86946b5253&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1>There ain't no one like you 💛</h1>
+    <p>Orange1106 4EVER</p>
+	<p>RJ💛CY</p>
+    <button class="button" onclick="showLine(1)">GET MORE VITAMINE C!!</button>
+    <div class="message" id="line1" style="display: none;">
+      <p>'Do not enter' is written on the doorway</p>
+    </div>
+    <button class="button" id="button2" onclick="showLine(2)" style="display: none;">I think you are so great</button>
+    <div class="message" id="line2" style="display: none;">
+      <p>Why can't everyone just go away?</p>
+    </div>
+    <button class="button" id="button3" onclick="showLine(3)" style="display: none;">I really love you</button>
+    <div class="message" id="line3" style="display: none;">
+      <p>Except you, you can stay 💕</p>
+    </div>
+  </div>
+
+  <script>
+    function showLine(lineNumber) {
+      const currentLine = document.getElementById(`line${lineNumber}`);
+      currentLine.style.display = 'block';
+
+      if (lineNumber < 3) {
+        const nextButton = document.getElementById(`button${lineNumber + 1}`);
+        nextButton.style.display = 'inline-block';
+      }
+    }
+  </script>
+</body>
+</html>
